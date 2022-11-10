@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Java1001_Lab6Todo_A00262875</string>
+    <string name="reminder">Enter Reminder</string>
+    <string name="done">Done</string>
+    <string name="toDoTitle">To Do list</string>
+    <string name="addToDoList">Create a New List</string>
+    <string name="ToDoHint">Enter text here</string>
+    <string name="addText">+</string>
+    <string name="removeSelected">Done</string>
+    <string name="entriesDone">Done</string>
+    <string name="deleteToDo">DELETE ALL</string>
+</resources>

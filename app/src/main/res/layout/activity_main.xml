@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/constraintLayout">
+    <!-- Using Linear Layout to array the views vertically -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- TextView for Title of App-->
+        <TextView
+            android:id="@+id/toDoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:text="@string/toDoTitle"
+            android:textColorHint="#FD000000"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="27sp"
+            tools:text="@string/toDoTitle" />
+        <!-- ListView which hold the to-do list-->
+        <ListView
+            android:id="@+id/toDoList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!-- A horizontal linear layout to center the button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+            <!-- Spacing to center-->
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <!-- The button for create a new to-do list -->
+            <Button
+                android:id="@+id/addToDoList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#673AB7"
+                android:text="@string/addToDoList"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+            <!-- Spacing to center-->
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <!-- A vertical linear layout to control the visibility of Edit Text and buttons-->
+        <LinearLayout
+            android:id="@+id/textLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--  Horizontal Linear layout to arrange EditText and add button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- The EditText where user can enter the To-Do Entry-->
+                <Button
+                    android:id="@+id/addText"
+                    android:layout_width="58dp"
+                    android:layout_height="59dp"
+                    android:backgroundTint="#673AB7"
+                    android:text="@string/addText"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/toDoText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:autofillHints="@string/ToDoHint"
+                    android:hint="@string/ToDoHint"
+                    android:inputType="textLongMessage"
+                    android:textAlignment="textStart"
+                    android:textColorHint="#FDB6B6B6"
+                    android:textIsSelectable="true"
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- The add to list (+) button-->
+
+            </LinearLayout>
+            <!-- A horizontal linear layout to center the button-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:orientation="horizontal"
+                android:textAlignment="center">
+                <!-- Spacing to center-->
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <!-- Button for Entries Done-->
+                <Button
+                    android:id="@+id/entriesDone"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#673AB7"
+                    android:text="@string/entriesDone"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+                <!-- Spacing to center-->
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_delete" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="147dp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+            <!-- Spacing to center-->
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <!-- Button to Delete all entries and reset the view-->
+            <Button
+                android:id="@+id/deleteToDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="@string/deleteToDo"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+            <!-- Spacing to center-->
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
